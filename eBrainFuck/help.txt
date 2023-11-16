@@ -1,0 +1,21 @@
+eBrainFuck: node eBrainFuck.js <命令行参数> --output1=<输出文件1> --output2=<输出文件2> 源文件
+
+将源文件编译为 BFT-Machine 支持的机器语言。
+
+命令行参数说明：
+
+--mode=pureBF 纯 BrainFuck 模式
+
+--mode=hardBF 硬件实现 BrainFuck 模式
+
+若无说明，则默认为硬件实现 BrainFuck 模式。
+
+--no-deadloop 不在程序结尾加入死循环
+
+【注意】若你的程序结尾也没有死循环，你的程序会进入错误的流程，包括反复执行。
+
+output1 程序的头 512 字节
+
+output2 程序的尾 512 字节
+
+项目地址：https://github.com/L1uTongwei/BFT-Machine
