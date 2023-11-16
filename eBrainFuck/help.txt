@@ -19,3 +19,5 @@ output1 程序的头 512 字节
 output2 程序的尾 512 字节
 
 项目地址：https://github.com/L1uTongwei/BFT-Machine
+
+作者：L1uTongwei<1347277058@qq.com>
