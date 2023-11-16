@@ -4,12 +4,6 @@ eBrainFuck: node eBrainFuck.js <命令行参数> --output1=<输出文件1> --out
 
 命令行参数说明：
 
---mode=pureBF 纯 BrainFuck 模式
-
---mode=hardBF 硬件实现 BrainFuck 模式
-
-若无说明，则默认为硬件实现 BrainFuck 模式。
-
 --no-deadloop 不在程序结尾加入死循环
 
 【注意】若你的程序结尾也没有死循环，你的程序会进入错误的流程，包括反复执行。
