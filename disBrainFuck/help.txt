@@ -1,0 +1,11 @@
+disBrainFuck: node disBrainFuck.js <--no-code> 源文件
+
+将 BFT-Machine 支持的机器语言反汇编为伪汇编。
+
+--no-code 不显示二进制信息
+
+由于编译出来是两个文件，也许你需要合并它们。
+
+项目地址：https://github.com/L1uTongwei/BFT-Machine
+
+作者：L1uTongwei<1347277058@qq.com>

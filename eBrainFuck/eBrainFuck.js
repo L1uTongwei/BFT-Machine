@@ -29,7 +29,7 @@ var repeatOutput = (op, repeat) => {
     for(var j = 1; j <= Math.floor(repeat / 17.0); j++){
         program.writeUInt8(op << 4 | 16, programCount++);
     }
-    program.writeUInt8(op << 4 | (repeat % 17 - 1), programCount++);
+    program.writeUInt8(op << 4 | ((repeat % 17) - 1), programCount++);
 };
 var writeStackTop = (data) => {
     program.writeUInt8(0b1110 << 4 | (data >> 16), programCount++); // 最高 4 位
@@ -62,10 +62,11 @@ if(stackPtr != 0){
     process.exit(1);
 }
 for(var i = 0; i < source.length; i++){
-    if(source[i] != '[' && source[i] != ']' && (repeatCount == 0 || source[i] == source[i - 1])){
+    if(source[i] != '[' && source[i] != ']' && (source[i] == source[i + 1])){
         repeatCount++;
         continue;
     }
+    repeatCount++;
     switch(source[i]){
         case '+':
             repeatOutput(0b1000, repeatCount);
@@ -104,6 +105,7 @@ for(var i = 0; i < source.length; i++){
             program.writeUInt8(0b00100000, programCount++);
             break;
     }
+    repeatCount = 0;
 }
 if(!noDeadLoop){ //死循环
     writeStackTop(programCount + 2);

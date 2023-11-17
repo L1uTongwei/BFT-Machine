@@ -10,7 +10,7 @@ BrainFuck 是一种最小化的编程语言，经过我修改之后实现到了�
 
 项目基于 [嘉立创 EDA](https://lceda.cn/) 开发，请使用这个软件打开。
 
-具体细节参阅 [数据表](/BFT-Machine%20Datasheet.pdf) 与 [eBrainFuck 开发文档](/eBrainFuck.md)
+具体细节参阅 [数据表](/BFT-Machine%20Datasheet.pdf)
 
 ### 致谢 & 贡献
 
